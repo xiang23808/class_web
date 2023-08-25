@@ -55,7 +55,7 @@
 
 <script>
 import { loginTeacher, loginStudent } from "@/api/user/index";
-import axios from 'axios'
+
 export default {
   data() {
     return {
@@ -138,15 +138,26 @@ export default {
         }
       });
     },
-    loginWithLine() {
-            axios.get(process.env.VUE_APP_API + '/api/line/redirect')
-                .then(response => {
-                  console.log(response.data.redirect)
-                    window.location.href = response.data.redirect;
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+    async loginWithLine() {
+      try {
+        const line_auth = 'https://access.line.me/oauth2/v2.1/authorize';
+const auth_params = {
+  response_type: 'code',
+  client_id: 2000515887,
+  redirect_uri: window.location.href,
+  state: 'STATE',
+  scope: 'profile openid email'
+};
+const params = new URLSearchParams()
+for (let key in auth_params) {
+  params.append(key, auth_params[key])
+}
+const paramsString = params.toString();
+window.location.href = `${line_auth}?${paramsString}`;
+
+      } catch (error) {
+        console.error('Error initiating LINE login:', error);
+      }
         },
   }
 };

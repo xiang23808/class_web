@@ -13,6 +13,14 @@ const router = new VueRouter({
       },
     },
     {
+      path: "/line",
+      name: "line",
+      component: (resolve) => require(["../components/line"], resolve),
+      meta: {
+        title: "line登录",
+      },
+    },
+    {
       path: "/login",
       name: "login",
       component: (resolve) => require(["../components/login"], resolve),
@@ -106,7 +114,7 @@ const router = new VueRouter({
 
 //挂载路由导航守卫
 router.beforeEach((to, from, next) => {
-  if (to.path === "/login") return next();
+  if (to.path === "/line" || to.path === "/login") return next();
   const tokenStr = window.sessionStorage.getItem("token");
   if (!tokenStr) return next("/login");
   if (to.meta.title) {
