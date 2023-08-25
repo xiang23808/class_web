@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --mode local",
-    "pro": "vue-cli-service serve --mode production",
-    "build:pro": "vue-cli-service build --mode production"
+    "serve": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --mode local",
+    "pro": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve --mode production",
+    "build:pro": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --mode production"
   },
   "dependencies": {
     "axios": "^0.21.0",
