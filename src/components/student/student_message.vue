@@ -143,7 +143,7 @@ export default {
       });
     },
     initWs() {
-      this.ws = new WebSocket("ws://local.class.com:63790");
+      this.ws = new WebSocket(process.env.WS_URL);
       this.listenWs();
     },
     reconnectWs() {
