@@ -1,0 +1,43 @@
+/* 全局样式表 */
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1366px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+body {
+    overflow: none;
+}
+
+.home-container {
+    position: relative;
+    height: 100%;
+}
+
+.el-header {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.el-aside {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    height: calc(100% - 60px);
+    overflow-x: hidden;
+}
+
+.el-main {
+    position: absolute;
+    left: 196px;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    overflow-y: auto;
+}

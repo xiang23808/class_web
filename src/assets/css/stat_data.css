@@ -1,0 +1,142 @@
+.container {
+    padding: 20px;
+}
+
+.container .header-row {
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #EBEEF5;
+    background-color: #FFF;
+    color: #303133;
+    transition: .3s;
+    padding: 0 20px;
+}
+
+.container .header-row .header-menu {
+    color: #4b94f8;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.container .header-row .header-menu span {
+    margin-left: 5px;
+}
+
+.container .header-row .header-info {
+    margin-top: 15px;
+}
+
+.container .cp-row {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #EBEEF5;
+    background-color: #FFF;
+    color: #303133;
+    transition: .3s;
+    padding: 20px;
+    min-height: 300px;
+}
+
+.container .exec-row {
+    box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #EBEEF5;
+    background-color: #FFF;
+    color: #303133;
+    transition: .3s;
+    padding: 20px;
+    margin-top: 10px;
+    min-height: 300px;
+}
+
+.container .group-list .title {
+    color: #4985FB;
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.container .group-list .group-row {
+    height: 80px;
+    margin: 0 30px;
+    background: #8cc5ff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.container .group-list .select-row {
+    background: #409eff;
+    box-shadow: 0px 0px 16px 0px #2a98f6;
+}
+
+.container .group-list .group-info {
+    height: 50px;
+}
+
+.container .group-list .group-info .group-msg .leader-name {
+    font-size: 16px;
+}
+
+.group-list .group-row .group-msg {
+    color: #ffffff;
+    font-size: 26px;
+    padding: 10px 0 0 30px;
+}
+
+.group-list .group-row .group-user-list {
+    margin-top: 20px;
+}
+
+.group-list .group-row .el-dropdown-link {
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.group-list .group-row .el-icon-arrow-down {
+    font-size: 12px;
+}
+
+.group-list .group-row .group-progress {
+    height: 30px;
+}
+
+.group-list .group-row .group-progress .el-progress {
+    margin: 8px 22px 8px 20px;
+}
+
+.group-list .group-row .group-progress .el-progress-bar__inner {
+    background-image: linear-gradient(90deg, #FC9F4F, #F5E6A8);
+}
+
+.group-list .group-row .group-progress .el-progress-bar__outer {
+    background-color: #78a5d4;
+}
+
+.container .cp-row .divider-col {
+    padding: 70px 0 20px 0;
+}
+
+.container .cp-row .divider-col .el-divider {
+    height: 100%;
+}
+
+.container .cp-row #cp-radar-chart {
+    /* height: 100%; */
+    width: 100%;
+    height: 400px;
+}
+
+.container .exec-row .divider-col {
+    padding: 70px 0 20px 0;
+}
+
+.container .exec-row .divider-col .el-divider {
+    height: 100%;
+}
+
+.container .exec-row #exec-radar-chart {
+    /* height: 100%; */
+    width: 100%;
+    height: 400px;
+}

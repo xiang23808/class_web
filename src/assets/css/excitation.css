@@ -1,0 +1,51 @@
+.excitation-list {
+    margin-top: 20px;
+}
+
+.excitation-list .left-box .show-right {
+    float: right;
+    padding: 3px 0;
+}
+
+.excitation-list .left-box .left-box-title {
+    text-align: center;
+    color: #409eff;
+}
+
+.excitation-list .left-box .left-box-input {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.excitation-list .left-box .left-box-input .el-input__inner {
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #409eff;
+    padding: 0 20px;
+}
+
+.excitation-list .left-box .left-box-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.rate-box .rate-box-title {
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    color: #409EFF;
+}
+
+.rate-box .rate-box-sign {
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    color: #ff0314;
+    text-align: left;
+    font-weight: bold;
+}
+
+.rate-box .rate-box-input .el-input__inner {
+    text-align: right;
+}

@@ -1,0 +1,97 @@
+.total-row div {
+    height: 160px;
+}
+
+.chart-row .el-card {
+    height: 320px;
+}
+
+.bottom-row .el-card {
+    margin-top: 20px;
+}
+
+.total-row .total-order {
+    background-image: url(../dashboard/dashboard1.png);
+    background-size: 100% 100%;
+}
+
+.total-row .today-order {
+    background-image: url(../dashboard/dashboard2.png);
+    background-size: 100% 100%;
+}
+
+.total-row .total-user {
+    background-image: url(../dashboard/dashboard3.png);
+    background-size: 100% 100%;
+}
+
+.total-row .finish-order {
+    background-image: url(../dashboard/dashboard4.png);
+    background-size: 100% 100%;
+}
+
+.total-row div .title {
+    height: 40px;
+    line-height: 64px;
+    text-align: left;
+    color: #cccccc;
+    padding-left: 35px;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+.total-row div .number {
+    height: 70px;
+    line-height: 45px;
+    text-align: left;
+    color: #fff;
+    padding-left: 35px;
+    font-size: 30px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.total-row div .number span {
+    color: #cccccc;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.chart-row #order-chart {
+    height: 280px;
+}
+
+.chart-row .order-filter {
+    position: absolute;
+    z-index: 999;
+    right: 40px;
+}
+
+.chart-row .order-col {
+    position: relative;
+}
+
+.chart-row .order-filter .el-radio-button {
+    margin-left: 14px;
+}
+
+.chart-row .order-filter .el-radio-button .el-radio-button__inner {
+    border: 1px solid #DCDFE6;
+    border-radius: 4px;
+}
+
+.chart-row .el-radio-button__orig-radio:checked+.el-radio-button__inner {
+    border: 1px solid #409EFF;
+}
+
+.chart-row #cp-group-chart {
+    height: 280px;
+}
+
+.chart-row #money-chart {
+    height: 280px;
+}
+
+.chart-row #exec-group-chart {
+    height: 280px;
+}

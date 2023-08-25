@@ -1,0 +1,37 @@
+{
+  "name": "class_web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode local",
+    "pro": "vue-cli-service serve --mode production",
+    "build:pro": "vue-cli-service build --mode production"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "core-js": "^3.6.5",
+    "docx-preview": "^0.1.8",
+    "echarts": "^5.2.1",
+    "el-tree-transfer": "^2.4.2",
+    "element-ui": "^2.4.5",
+    "jwchat": "^1.0.12",
+    "moment": "^2.29.1",
+    "sortablejs": "^1.12.0",
+    "vue": "^2.6.11",
+    "vue-clipboard2": "^0.3.3",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0",
+    "xlsx": "^0.17.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "less": "^3.12.2",
+    "less-loader": "^7.1.0",
+    "vue-cli-plugin-element": "^1.0.1",
+    "vue-template-compiler": "^2.6.11",
+    "vue-wechat-title": "^2.0.7"
+  }
+}
