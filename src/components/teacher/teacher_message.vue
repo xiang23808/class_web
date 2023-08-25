@@ -141,7 +141,7 @@ export default {
       });
     },
     initWs() {
-      this.ws = new WebSocket(process.env.WS_URL);
+      this.ws = new WebSocket(process.env.VUE_APP_WS_URL);
       this.listenWs();
     },
     reconnectWs() {
