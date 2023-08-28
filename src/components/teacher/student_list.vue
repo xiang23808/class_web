@@ -1,5 +1,19 @@
 <template>
   <div class="mixin-components-container" style="margin: 20px">
+    <el-row :gutter="20">
+      <el-col :span="4" :offset="0">
+        <div class="grid-content bg-purple">
+          <el-button
+              type="primary"
+              @click="showAddForm = true"
+              v-if="operateBtn.addBtn"
+          >
+            注册学生账号
+          </el-button>
+        </div>
+      </el-col>
+    </el-row>
+    
     <el-card class="box-card" style="margin-top: 20px" v-loading="loading">
       <el-table :data="list" style="width: 100%" stripe fit>
         <el-table-column
@@ -11,21 +25,6 @@
             :key="i.value"
         ></el-table-column>
 
-        <el-table-column
-            label="操作"
-            align="center"
-            class-name="small-padding fixed-width"
-        >
-          <template slot-scope="scope">
-            <el-button
-                type="primary"
-                size="mini"
-                @click="tall(scope.row)"
-            >
-              聊天
-            </el-button>
-          </template>
-        </el-table-column>
       </el-table>
 
       <!-- 分页 -->
@@ -42,6 +41,13 @@
       </el-pagination>
       <!-- 内容主体区域 -->
     </el-card>
+    <template>
+      <add-form
+          :showAddForm="showAddForm"
+          @getUsersList="getUsersList"
+          @hideAddForm="hideAddForm"
+      ></add-form>
+    </template>
   </div>
 </template>
 <style>
@@ -61,8 +67,12 @@
 import {
   studentList,
 } from "@/api/user/index";
+import addForm from "./add_student.vue";
 
 export default {
+  components: {
+    addForm,
+  },
   data() {
     return {
       loading: false,
@@ -75,6 +85,10 @@ export default {
       userShow: [],
       list: [],
       platform: process.env.VUE_APP_OUTPUTDIR,
+      operateBtn: {
+        addBtn: true,
+      },
+      showAddForm: false,
     };
   },
   created() {
@@ -119,9 +133,9 @@ export default {
       this.userShow = Data;
       this.loading = false;
     },
-    tall() {
-
-    }
+    hideAddForm() {
+      this.showAddForm = false;
+    },
   },
 };
 </script>

@@ -11,21 +11,6 @@
             :key="i.value"
         ></el-table-column>
 
-        <el-table-column
-            label="操作"
-            align="center"
-            class-name="small-padding fixed-width"
-        >
-          <template slot-scope="scope">
-            <el-button
-                type="primary"
-                size="mini"
-                @click="tall(scope.row)"
-            >
-              聊天
-            </el-button>
-          </template>
-        </el-table-column>
       </el-table>
 
       <!-- 分页 -->
@@ -124,9 +109,6 @@ export default {
       this.loading = false;
     },
 
-    tall(val) {
-      console.log(val)
-    },
   },
 };
 </script>

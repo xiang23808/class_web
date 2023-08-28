@@ -45,18 +45,37 @@
           >
           <div>
         <button @click="loginWithLine">通过 Line 登录</button>
+        <div class="grid-content bg-purple">
+          <el-button
+              type="primary"
+              @click="showAddForm = true"
+              v-if="operateBtn.addBtn"
+          >
+            注册教师管理员
+          </el-button>
+        </div>
         </div>
           <!-- <el-button type="primary" @click="resetloginForm">重置</el-button> -->
         </el-form-item>
       </el-form>
     </div>
+    <template>
+      <add-form
+          :showAddForm="showAddForm"
+          @hideAddForm="hideAddForm"
+      ></add-form>
+    </template>
   </div>
 </template>
 
 <script>
 import { loginTeacher, loginStudent } from "@/api/user/index";
+import addForm from "./reg_teacher.vue";
 
 export default {
+  components: {
+    addForm,
+  },
   data() {
     return {
       fullscreenLoading: false,
@@ -74,6 +93,10 @@ export default {
       time: 60,
       platform: process.env.VUE_APP_OUTPUTDIR,
       type: "1",
+      showAddForm: false,
+      operateBtn: {
+        addBtn: true,
+      },
     };
   },
   methods: {
@@ -159,6 +182,10 @@ window.location.href = `${line_auth}?${paramsString}`;
         console.error('Error initiating LINE login:', error);
       }
         },
+
+        hideAddForm() {
+      this.showAddForm = false;
+    },
   }
 };
 </script>
@@ -173,7 +200,7 @@ window.location.href = `${line_auth}?${paramsString}`;
 
 .login_box {
   width: 450px;
-  height: 380px;
+  height: 450px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 7px;
   position: absolute;

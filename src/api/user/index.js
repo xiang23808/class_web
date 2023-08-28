@@ -8,6 +8,14 @@ export function loginTeacher(params) {
         data: params
     })
 }
+// 教师注册
+export function regTeacher(params) {
+    return Service({
+        url: '/api/teacher/create',
+        method: 'post',
+        data: params
+    })
+}
 // 学生登录
 export function loginStudent(params) {
     return Service({
@@ -58,6 +66,14 @@ export function studentWatchTeacherList(params) {
 export function studentList(params) {
     return Service({
         url: '/api/teacher/student_list',
+        method: 'post',
+        data: params
+    })
+}
+// 创建学生账号
+export function createStudent(params) {
+    return Service({
+        url: '/api/teacher/create_student',
         method: 'post',
         data: params
     })
